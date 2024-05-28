@@ -1,7 +1,7 @@
 // TYPE WRITE //
 window.onload = function () {
-    typeWriter('typewrite1', text1, 60, function () {
-      typeWriter('typewrite2', text2, 60);
+    typeWriter('typewrite1', text1, 75, function () {
+      typeWriter('typewrite2', text2, 70);
     });
   };
 

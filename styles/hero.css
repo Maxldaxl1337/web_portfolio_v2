@@ -10,17 +10,54 @@ body {
   background-color: #111418;
 }
 
-.box {
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+.hero {
   font-family: "Nanum Gothic Coding";
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 75vh;
+  height: 90vh;
+  width: 100%;
+  position: fixed;
 }
 
 .title {
   font-size: 70px;
-  font-style: normal !important;
+  background-color: #181A21;
+  border: 3px solid #323745;
+  padding: 40px 80px;
+  width: 60%;
+  position: fixed;
   pointer-events: none;
 }
 
@@ -32,4 +69,6 @@ body {
   bottom: -11px;
   left: -4px;
   font-weight: lighter;
-}/*# sourceMappingURL=hero.css.map */
+}
+
+/* Responsive Design *//*# sourceMappingURL=hero.css.map */

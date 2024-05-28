@@ -1,14 +1,20 @@
 @import "global";
 
-.box {
-    font-family: $secondary-font;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 75vh;
-  } .title {
+.hero {
+  font-family: $secondary-font;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  width: 100%;
+  position: fixed;
+} .title {
     font-size: 70px;
-    font-style: normal !important;
+    background-color: #181A21;
+    border: 3px solid #323745;
+    padding: 40px 80px;
+    width: 60%;
+    position: fixed;
     pointer-events: none;
   }
 
@@ -21,3 +27,5 @@
     left: -4px;
     font-weight: lighter;
   }
+
+/* Responsive Design */
