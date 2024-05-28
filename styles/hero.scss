@@ -1,9 +1,23 @@
 @import "global";
 
-.nigger {
-    color: $primary-color;
-}
+.box {
+    font-family: $secondary-font;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+  } .title {
+    font-size: 70px;
+    font-style: normal !important;
+    pointer-events: none;
+  }
 
-.silvan {
-    color: $secondary-color;
-}
+#cursor {
+    font-family: Helvetica;
+    color: $primary-color;
+    font-size: 90px;
+    position: relative;
+    bottom: -11px;
+    left: -4px;
+    font-weight: lighter;
+  }
