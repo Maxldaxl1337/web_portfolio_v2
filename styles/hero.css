@@ -51,6 +51,21 @@ p, h1, h2, h3, h4, h5, h6 {
   position: fixed;
 }
 
+.tab-name {
+  position: absolute;
+  top: 127px;
+  left: 20%;
+  pointer-events: none;
+  color: white;
+  background-color: #181A21;
+  border-top: 3px solid #323745;
+  border-left: 3px solid #323745;
+  border-right: 3px solid #323745;
+  border-bottom: 1px solid #323745;
+  padding: 10px 15px;
+  z-index: 1;
+}
+
 .title {
   font-size: 70px;
   background-color: #181A21;
@@ -63,7 +78,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #cursor {
   font-family: Helvetica;
-  color: white;
+  color: #6687ff;
   font-size: 90px;
   position: relative;
   bottom: -11px;
