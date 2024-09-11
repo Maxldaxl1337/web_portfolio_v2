@@ -1,3 +1,4 @@
+/* Imports */
 /* Lexend Deca */
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Nanum+Gothic+Coding&display=swap");
 /* Nanum Gothic Coding */
@@ -41,20 +42,23 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-.hero {
+/* Styles */
+.MHU-module-hero {
   font-family: "Nanum Gothic Coding";
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 90vh;
   width: 100%;
-  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
 }
-
-.tab-name {
-  position: absolute;
-  top: 127px;
-  left: 20%;
+.MHU-module-hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+}
+.MHU-module-hero__tab-name {
   pointer-events: none;
   color: white;
   background-color: #181A21;
@@ -63,27 +67,29 @@ p, h1, h2, h3, h4, h5, h6 {
   border-right: 3px solid #323745;
   border-bottom: 1px solid #323745;
   padding: 10px 15px;
-  z-index: 1;
+  width: 10em;
 }
-
-.title {
-  font-size: 70px;
+.MHU-module-hero__title {
+  font-size: 4.5vw;
   background-color: #181A21;
   border: 3px solid #323745;
   padding: 40px 80px;
-  width: 60%;
-  position: fixed;
-  pointer-events: none;
+  width: 100%;
 }
 
 #cursor {
   font-family: Helvetica;
   color: #6687ff;
-  font-size: 90px;
+  font-size: 5vw;
   position: relative;
   bottom: -11px;
   left: -4px;
   font-weight: lighter;
 }
 
-/* Responsive Design *//*# sourceMappingURL=hero.css.map */
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .MHU-module-hero__title {
+    padding: 30px 40px;
+  }
+}/*# sourceMappingURL=hero.css.map */

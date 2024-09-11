@@ -1,40 +1,51 @@
+/* Imports */
 @import "global";
 
-.hero {
+/* Styles */
+.MHU-module-hero {
   font-family: $secondary-font;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 90vh;
   width: 100%;
-  position: fixed;
-} .tab-name {
-  position: absolute;
-  top: 127px;
-  left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   pointer-events: none;
-  color: $primary-color;
-  background-color: #181A21;
-  border-top: 3px solid #323745;
-  border-left: 3px solid #323745;
-  border-right: 3px solid #323745;
-  border-bottom: 1px solid #323745;
-  padding: 10px 15px;
-  z-index: 1;
-} .title {
-    font-size: 70px;
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+  }
+
+  &__tab-name {
+    pointer-events: none;
+    color: $primary-color;
+    background-color: #181A21;
+    border-top: 3px solid #323745;
+    border-left: 3px solid #323745;
+    border-right: 3px solid #323745;
+    border-bottom: 1px solid #323745;
+    padding: 10px 15px;
+    width: 10em;
+  }
+
+  &__title {
+    font-size: 4.5vw;
     background-color: #181A21;
     border: 3px solid #323745;
     padding: 40px 80px;
-    width: 60%;
-    position: fixed;
-    pointer-events: none;
+    width: 100%;
   }
+}
+
+
+
 
 #cursor {
     font-family: Helvetica;
     color: #6687ff;
-    font-size: 90px;
+    font-size: 5vw;
     position: relative;
     bottom: -11px;
     left: -4px;
@@ -42,3 +53,10 @@
   }
 
 /* Responsive Design */
+@media (max-width: 1280px) {
+  .MHU-module-hero {
+    &__title {
+      padding: 30px 40px;
+    }
+  }
+}

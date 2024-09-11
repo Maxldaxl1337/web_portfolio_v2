@@ -1,11 +1,11 @@
 // TYPE WRITE //
 window.onload = function () {
-    typeWriter('typewrite1', text1, 75, function () {
+    typeWriter('typewrite1', text1, 60, function () {
       typeWriter('typewrite2', text2, 70);
     });
   };
 
-  const text1 = "Maximilian";
+  const text1 = "ximilian";
   const text2 = " Huetter";
 
   function typeWriter(elementId, text, speed, callback) {
@@ -27,7 +27,7 @@ window.onload = function () {
     type();
   }
 
-//BLINKY BLINKY//
+// BLINKY BLINKY //
 let visibleCursor = false
 setInterval(() => {
     if (visibleCursor){
