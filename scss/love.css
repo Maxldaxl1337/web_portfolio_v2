@@ -12,6 +12,7 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  transition: all 1.5s ease;
 }
 
 /* CSS Reset */
@@ -86,6 +87,9 @@ p, h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   animation: pulse 2.5s infinite;
   transition: transform 0.2s ease-in-out, font-size 0.3s ease;
+}
+.MH-heart-button {
+  position: fixed;
 }
 
 .MH-heart:hover {

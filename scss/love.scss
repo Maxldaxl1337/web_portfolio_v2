@@ -41,6 +41,9 @@
     display: inline-block;
     animation: pulse 2.5s infinite;
     transition: transform 0.2s ease-in-out, font-size .3s ease;
+    &-button {
+      position: fixed;
+    }
   }
   .MH-heart:hover {
     font-size: 5em;
