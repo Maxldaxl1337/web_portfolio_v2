@@ -3,7 +3,7 @@
 
 /* Styles */
 .MHU-module-hero {
-  font-family: $secondary-font;
+  font-family: $ff-secondary;
   height: 90vh;
   width: 100%;
   display: flex;
@@ -20,7 +20,7 @@
 
   &__tab-name {
     pointer-events: none;
-    color: $primary-color;
+    color: $clr-white;
     background-color: #181A21;
     border-top: 3px solid #323745;
     border-left: 3px solid #323745;
@@ -38,9 +38,6 @@
     width: 100%;
   }
 }
-
-
-
 
 #cursor {
     font-family: Helvetica;

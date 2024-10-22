@@ -1,19 +1,20 @@
 @import "fonts";
 
 /* Fonts */
-$primary-font: "Lexend Deca";
-$secondary-font: "Nanum Gothic Coding";
+$ff-primary: "Lexend Deca";
+$ff-secondary: "Nanum Gothic Coding";
 
 /* Colors */
-$primary-color: #ffff;
-$secondary-color: rgba(255, 255, 255, 0.65);
+$clr-white: #ffff;
+$clr-grey: rgba(255, 255, 255, 0.65);
 
-$background-color: #111418;
+$clr-background: #111418;
 
 /* Styles */
 body {
-    font-family: $primary-font;
-    background-color: $background-color;
+    font-family: $ff-primary;
+    background-color: $clr-background;
+    user-select: none;
 }
 
 /* CSS Reset */
@@ -40,6 +41,7 @@ body {
   }
 
   p, h1, h2, h3, h4, h5, h6 {
+    color: $clr-white; 
     overflow-wrap: break-word;
   }
 
