@@ -18,12 +18,11 @@ setInterval(updateTimer, 1000);
 
 updateTimer();
 
-// Love Animation
+// Love Animation Body Background
 const heartButton = document.querySelector(".MH-heart-button");
 const body = document.body;
 
 heartButton.addEventListener("click", () => {
-    console.log("Test");
     body.classList.add('love');
 });
 
@@ -52,3 +51,21 @@ button.addEventListener('click', function() {
     countDisplay.innerText = `${clickCount}`;
     setCookie('clickCount', clickCount, 7); // 7 days cookie
 });
+
+// Click Animation Trigger
+button.addEventListener('click', () => {
+  button.classList.add('clicked');
+
+  setTimeout(() => {
+    button.classList.remove('clicked');
+  }, 300);
+});
+
+// Console Message 
+function loveReminder(interval) {
+    setInterval(() => {
+        console.log("I lieb die mehr, Lisa <3");
+    }, interval);
+}
+
+loveReminder(3000);
