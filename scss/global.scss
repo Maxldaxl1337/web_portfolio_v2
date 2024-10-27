@@ -6,6 +6,7 @@ $ff-secondary: "Nanum Gothic Coding";
 
 /* Colors */
 $clr-white: #ffff;
+$clr-black: #0000;
 $clr-grey: rgba(255, 255, 255, 0.65);
 $clr-pink-light: rgb(255, 234, 237);
 
@@ -13,8 +14,9 @@ $clr-background: #111418;
 
 /* Styles */
 body {
-    font-family: $ff-primary;
+    color: $clr-white;
     background-color: $clr-background;
+    font-family: $ff-primary;
     user-select: none;
     transition: all 1.5s ease;
 }
