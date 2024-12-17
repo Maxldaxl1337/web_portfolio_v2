@@ -49,7 +49,7 @@ countDisplay.innerText = `${clickCount}`;
 button.addEventListener('click', function() {
     clickCount++;
     countDisplay.innerText = `${clickCount}`;
-    setCookie('clickCount', clickCount, 7); // 7 days cookie
+    setCookie('clickCount', clickCount, 3); // 3 days cookie
 });
 
 // Click Animation Trigger

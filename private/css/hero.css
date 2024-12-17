@@ -7,8 +7,9 @@
 /* Colors */
 /* Styles */
 body {
-  font-family: "Lexend Deca";
+  color: white;
   background-color: #111418;
+  font-family: "Lexend Deca";
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;

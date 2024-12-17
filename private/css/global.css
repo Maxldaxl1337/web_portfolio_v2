@@ -12,7 +12,6 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  transition: all 1.5s ease;
 }
 
 /* CSS Reset */
@@ -45,4 +44,4 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #root, #__next {
   isolation: isolate;
-}/*# sourceMappingURL=global.css.map */
+}

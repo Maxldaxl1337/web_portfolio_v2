@@ -46,11 +46,11 @@ body {
     display: inline-block;
     animation: pulse 2.5s infinite;
     transition: transform 0.2s ease-in-out, color .6s ease;
-}
-.MH-heart:hover {
-    color: $clr-pink-light;
-    cursor: pointer;
-}
+    &:hover {
+      color: $clr-pink-light;
+      cursor: pointer;
+    }
+} 
 .clicked {
   animation: clickAnim 0.3s ease;
 }
@@ -60,6 +60,13 @@ body {
     bottom: 0;
     left: 0;
     margin: 5px 10px;
+}
+
+/* Responsive Design */ 
+@media (max-width: 600px) {
+  .MH-module-timer__time {
+    margin: 0 14px !important;
+  }
 }
 
 /* Animations */
@@ -90,12 +97,5 @@ body {
   }
   100% {
     transform: scale(1);
-  }
-}
-
-/* Responsive Design */ 
-@media (max-width: 600px) {
-  .MH-module-timer__time {
-    margin: 0 14px !important;
   }
 }
