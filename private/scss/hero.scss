@@ -2,7 +2,7 @@
 @import "global";
 
 /* Styles */
-.MHU-module-hero {
+.MH-module-hero {
   font-family: $ff-secondary;
   height: 90vh;
   width: 100%;
@@ -48,7 +48,7 @@
 
 /* Responsive Design */
 @media (max-width: 1280px) {
-  .MHU-module-hero {
+  .MH-module-hero {
     &__title {
       padding: 30px 40px;
     }
