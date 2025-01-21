@@ -1,0 +1,43 @@
+/* Imports */
+@import "global";
+
+/* Styles */
+.MH-module-about {
+    &__wrapper {
+        background-color: $clr-whitefilter;
+        display: flex;
+        justify-content: center;
+        gap: 10em;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 600px;
+        &-top {
+            h1 {
+                font-size: 45px;
+                letter-spacing: 1px;
+                line-height: 45px;
+                margin-bottom: 25px;
+            }
+            h2 {
+                font-size: 28px;
+                opacity: .55;
+            }
+        }
+        &-bottom {
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+    &__right {
+        &-image {
+            img {
+                width: 500px;
+                height: auto;
+            }
+        }
+    }
+}

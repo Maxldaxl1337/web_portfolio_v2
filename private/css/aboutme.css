@@ -1,0 +1,84 @@
+/* Imports */
+/* Lexend Deca */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Nanum+Gothic+Coding&display=swap");
+/* Nanum Gothic Coding */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Nanum+Gothic+Coding&display=swap");
+/* Lexend Deca */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Nanum+Gothic+Coding&display=swap");
+/* Nanum Gothic Coding */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Nanum+Gothic+Coding&display=swap");
+/* Fonts */
+/* Colors */
+/* Media Queries */
+/* Styles */
+body {
+  color: white;
+  background-color: #111418;
+  font-family: "Lexend Deca";
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  color: white;
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Styles */
+.MH-module-about__wrapper {
+  background-color: #15171b;
+  display: flex;
+  justify-content: center;
+  gap: 10em;
+}
+.MH-module-about__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+}
+.MH-module-about__left-top h1 {
+  font-size: 45px;
+  letter-spacing: 1px;
+  line-height: 45px;
+  margin-bottom: 25px;
+}
+.MH-module-about__left-top h2 {
+  font-size: 28px;
+  opacity: 0.55;
+}
+.MH-module-about__left-bottom p {
+  font-size: 20px;
+}
+.MH-module-about__right-image img {
+  width: 500px;
+  height: auto;
+}
