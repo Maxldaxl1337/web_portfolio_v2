@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willsch du?</title>
+    <style>
+        :root {
+            --bg-color: #fce4ec;
+            --primary-pink: #ff4d6d;
+            --text-color: #590d22;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #fce4ec 0%, #ffe5ec 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            transition: background 0.5s ease;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        body.pink {
+            background: #ff85a1;
+        }
+
+        .container {
+            padding: 20px;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            min-height: 100px;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        #yesBtn {
+            background-color: var(--primary-pink);
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #ffffff;
+            color: #555;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Heart Animation */
+        .heart {
+            position: fixed;
+            top: -10%;
+            user-select: none;
+            pointer-events: none;
+            z-index: 1;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 480px) {
+            h1 { font-size: 1.5rem; }
+            .btn { padding: 12px 25px; font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 id="text">Willsch du meine Valentine sein?</h1>
+
+    <div class="buttons">
+        <a href="tel:+49123456789" class="btn" id="yesBtn">Jo</a>
+        <button class="btn" id="noBtn">Na</button>
+    </div>
+</div>
+
+<script>
+    const noBtn = document.getElementById("noBtn");
+    const text = document.getElementById("text");
+    const yesBtn = document.getElementById("yesBtn");
+
+    const messages = [
+        "Bisch der sicher? 😳",
+        "Gonz sicher? 🥺",
+        "Wirklich net? 😭",
+        "Bitte sog jo.. 💔",
+        "Leschte Chance 😢",
+        "Ma putana :( ... 🧸"
+    ];
+
+    let count = 0;
+
+    // Function to move the "No" button
+    function moveNo() {
+        // Get viewport dimensions minus button size to keep it on screen
+        const padding = 50;
+        const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+        const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+
+        // Generate random positions
+        const randomX = Math.floor(Math.random() * maxX);
+        const randomY = Math.floor(Math.random() * maxY);
+
+        // Since it's relative or static initially, we switch to fixed/absolute
+        noBtn.style.position = "fixed";
+        noBtn.style.left = randomX + "px";
+        noBtn.style.top = randomY + "px";
+
+        if (count < messages.length) {
+            text.textContent = messages[count];
+            count++;
+        }
+    }
+
+    noBtn.addEventListener("mouseenter", moveNo);
+    noBtn.addEventListener("touchstart", (e) => {
+        e.preventDefault(); // Prevents accidental click on mobile
+        moveNo();
+    });
+
+    yesBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        document.body.classList.add("pink");
+        text.style.fontSize = "3rem";
+        text.textContent = "Jaaa! 💖💘💞";
+
+        // Hide the No button
+        noBtn.style.display = "none";
+
+        // Heart storm
+        const heartRain = setInterval(createHeart, 100);
+
+        setTimeout(() => {
+            clearInterval(heartRain);
+            window.location.href = yesBtn.href;
+        }, 4000); // 4 seconds of hearts before the call
+    });
+
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+
+        const heartTypes = ["❤️", "💖", "💝", "💕", "🌸", "💘"];
+        heart.textContent = heartTypes[Math.floor(Math.random() * heartTypes.length)];
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = Math.random() * 20 + 20 + "px";
+        heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+        heart.style.opacity = Math.random();
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 5000);
+    }
+</script>
+</body>
+</html>
